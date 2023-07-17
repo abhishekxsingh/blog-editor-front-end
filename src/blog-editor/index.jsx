@@ -4,7 +4,10 @@ import axios from 'axios';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { useNavigate } from "react-router-dom";
+import { ChatGPTAPI } from 'chatgpt'
 import './index.scss';
+
+//global.fetch = fetch
 
 const MyEditor = ({isAuthenticated}) =>  {
 
@@ -84,6 +87,7 @@ const handleSubmit = async () => {
           <div className="form__group field">
               <input type="input" className="form__field" placeholder="Article title" name="title" onChange={ (evt) => { setTitle(evt.target.value) } }required />
               <label for="title" className="form__label">Article title</label>
+              {/* <button onClick={}>Generate blog</button> */}
           </div>
         <div className="editor-wrapper">
           <CKEditor editor={ClassicEditor} onChange={ ( event, editor ) => { const data = editor.getData(); 

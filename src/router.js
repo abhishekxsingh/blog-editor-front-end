@@ -46,20 +46,20 @@ const ReactRouter = () => {
         },
     ]);
 
-    return (<div class="wrapper">
-    <nav class="nav">
-        <div class="nav-logo">
+    return (<div className="wrapper">
+    <nav className="nav">
+        <div className="nav-logo">
             <p>BLOG .</p>
         </div>
-        <div class="nav-menu" id="navMenu">
+        <div className="nav-menu" id="navMenu">
             <ul>
-                <li><a href="/" class="link">Home</a></li>
-                {!isAuthenticated && <li><a href="/" class="link active">Login</a></li>}
-                <li><a href="/" class="link">Blog</a></li>
-                {isAuthenticated && <li><a href="http://localhost:3000/editor" class="link">Blog Editor</a></li>}
+                <li><a href="/" className="link">Home</a></li>
+                {!isAuthenticated && <li><a href="/" className="link active">Login</a></li>}
+                <li><a href="/" className="link">Blog</a></li>
+                {isAuthenticated && <li><a href="http://localhost:3000/editor" className="link">Blog Editor</a></li>}
             </ul>
         </div>
-        {!isAuthenticated && <div class="nav-button">
+        {!isAuthenticated && <div className="nav-button">
             <button className="btn white-btn" id="loginBtn">Sign Up</button>
         </div>}
     </nav>  
